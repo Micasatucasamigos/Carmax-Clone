@@ -1,5 +1,3 @@
-
-
 <template>
   <header>
     <Navbar />
@@ -156,7 +154,7 @@ import Footer from '../components/Footer.vue'
 const title = ref('BestCars')
 </script>
 
-<style>
+<style scoped>
 @media (min-width: 1024px) {
   .about {
     min-height: 100vh;
