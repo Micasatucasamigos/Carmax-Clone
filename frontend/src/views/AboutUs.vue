@@ -3,8 +3,8 @@
     <Navbar />
   </header>
   <!-- Who we are section -->
-  <div class="container px-4 py-5" id="icon-grid">
-    <h1 class="row pb-2 justify-content-center">Who We Are</h1>
+  <div class="container px-4 py-4" id="icon-grid">
+    <h1 class="row pb-4 justify-content-center">Who We Are</h1>
     <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-2 g-4 py-1">
       <div class="col d-flex align-items-start">
         <div>
@@ -50,7 +50,7 @@
   <!-- What matters to us section -->
   <div class="container-fluid px-0 py-5 bg-custom" id="icon-grid">
     <div class="container px-4">
-      <h1 class="row pb-2 justify-content-center">What Matters To Us</h1>
+      <h1 class="row pb-4 justify-content-center">What Matters To Us</h1>
       <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-2 g-4 py-1">
         <div class="col d-flex align-items-start">
           <div class="img-container">
@@ -100,42 +100,48 @@
     </div>
   </div>
   <!-- What we do section -->
-  <div class="container px-4 py-5" id="icon-grid">
-    <h1 class="row pb-2 justify-content-center">What We Do</h1>
-    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-3 g-4 py-1">
+  <div class="container what-we-do px-4 py-5" id="icon-grid">
+    <h1 class="row mb-4 justify-content-center ">What We Do</h1>
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-3 g-5 py-1">
       <div class="col d-flex align-items-start justify-content-end">
         <div>
-          <h1>240+</h1>
+          <img src="../assets/icon_what_we_do_stores.svg">
+          <h1 class="row justify-content-center">240+</h1>
           <h5 class="text-center">stores in 41 states</h5>
         </div>
       </div>
       <div class="col d-flex align-items-start justify-content-center">
         <div>
-          <h1>30,000+</h1>
+          <img src="../assets/icon_what_we_do_employee.svg">
+          <h1 class="row justify-content-center">30,000+</h1>
           <h5 class="text-center">Employees</h5>
         </div>
       </div>
       <div class="col d-flex align-items-start">
         <div>
-          <h1>45,000+</h1>
+          <img src="../assets/icon_what_we_do_inventory.svg">
+          <h1 class="row justify-content-center">45,000+</h1>
           <h5 class="text-center">{{ title }} Certified cars</h5>
         </div>
       </div>
       <div class="col d-flex align-items-start justify-content-end">
         <div>
-          <h1>11+ million</h1>
+          <img src="../assets/icon_what_we_do_cars_sold.svg">
+          <h1 class="row justify-content-center">11+ million</h1>
           <h5 class="text-center">cars sold</h5>
         </div>
       </div>
       <div class="col d-flex align-items-start justify-content-center">
         <div>
-          <h1>42+ million</h1>
+          <img src="../assets/icon_what_we_do_cars_appraised.svg">
+          <h1 class="row justify-content-center">42+ million</h1>
           <h5 class="text-center">cars appraised</h5>
         </div>
       </div>
       <div class="col d-flex align-items-start">
         <div>
-          <h1>12+ million</h1>
+          <img src="../assets/icon_what_we_do_cars_purchased.svg">
+          <h1 class="row justify-content-center">12+ million</h1>
           <h5 class="text-center">cars purchased</h5>
         </div>
       </div>
@@ -162,10 +168,6 @@ const title = ref('BestCars')
     align-items: center;
   }
 }
-  * {
-    margin: 0;
-    padding: 0;
-  }
 .img-container {
   width: 100%;
   max-width: 100%;
@@ -187,5 +189,10 @@ const title = ref('BestCars')
 .bg-custom {
   background-color:gainsboro
 }
-
+.what-we-do {
+  width: 50%;
+}
+.who-we-are {
+  width: 50%;
+}
 </style>

@@ -9,6 +9,8 @@ import PasswordReset from '../views/PasswordReset.vue'
 import SellTrade from '../views/SellTrade.vue'
 import Finance from '../views/Finance.vue'
 import Support from '../views/Support.vue'
+import TopicPage from '../components/TopicPage.vue'
+
 
 
 
@@ -73,6 +75,12 @@ const router = createRouter({
       path: '/support',
       name: 'support',
       component: Support
+    },
+    {
+      path: '/topic/:name',
+      name: 'TopicPage',
+      component: TopicPage,
+      props: true
     },
   ],
   scrollBehavior(to, from, savedPosition) {

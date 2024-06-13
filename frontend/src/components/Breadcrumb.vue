@@ -1,12 +1,21 @@
 <template>
-  <nav>
+  <nav aria-label="breadcrumb">
     <ol class="breadcrumb">
       <li
-        v-for="{crumb,ci} in crumbs"
+        v-for="(crumb, ci) in crumbs"
         :key="ci"
-        class="breadcrumb-item align-items-center"
+        class="breadcrumb-item"
+        :class="{ active: isLast(ci) }"
+        aria-current="page"
       >
-        <button class="btn btn-link" :class="{ disabled: isLast(ci) }" @click="selected(crumb)"></button>
+        <button
+          v-if="!isLast(ci)"
+          class="btn btn-link"
+          @click="selected(crumb)"
+        >
+          {{ crumb }}
+        </button>
+        <span v-else>{{ crumb }}</span>
       </li>
     </ol>
   </nav>
@@ -14,6 +23,7 @@
 
 <script setup>
 import { defineProps, defineEmits } from 'vue'
+import { useRouter } from 'vue-router'
 
 // Define the props
 const props = defineProps({
@@ -31,17 +41,22 @@ const isLast = (index) => {
   return index === props.crumbs.length - 1
 }
 
+// Get the router instance
+const router = useRouter()
+
 // Define the selected method
 const selected = (crumb) => {
   emit('selected', crumb)
+  
+  // Navigate to the Support page when the first breadcrumb is clicked
+  if (crumb === 'Support') {
+    router.push({ name: 'support' })
+  }
 }
 </script>
 
 <style scoped>
-.breadcrumb {
-  background-color: white;
-  color:black;
-  border: 1px solid rgba(0, 0, 0, 0.125);
-  border-radius: 0.37rem;
+.breadcrumb-item+.breadcrumb-item::before {
+  content: '>'; /* Change this to your desired divider */
 }
 </style>

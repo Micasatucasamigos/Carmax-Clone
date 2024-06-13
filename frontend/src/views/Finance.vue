@@ -5,7 +5,7 @@ import Footer from '../components/Footer.vue'
 import StateDropdown from "../components/StateDropdown.vue"
 import CreditDropdown from "../components/CreditDropdown.vue"
 import TermlengthDropdown from "../components/TermlengthDropdown.vue"
-import FinancingAccordian from '../components/FinancingAccordian.vue'
+// import FinancingAccordian from '../components/FinancingAccordian.vue'
 
 
 </script>

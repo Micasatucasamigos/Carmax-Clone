@@ -1,8 +1,28 @@
 <script setup>
 import { ref } from 'vue'
+import { useRouter } from 'vue-router'
 import Navbar from '../components/Navbar.vue'
 import Footer from '../components/Footer.vue'
-import FAQAccordian from '../components/FAQAccordian.vue'
+
+// List of FAQ topics
+const topics = [
+  "Security",
+  "Making Payments",
+  "Selling a Car",
+  "Financing",
+  "Warranties & More",
+  "Seeing a Car",
+  "Buying a Car",
+  "Finding a Car",
+  "Safety Recalls"
+]
+
+const router = useRouter()
+
+// Method to handle button clicks
+const handleTopicClick = (topic) => {
+  router.push({ name: 'TopicPage', params: { name: topic } })
+}
 </script>
 
 <template>
@@ -10,14 +30,23 @@ import FAQAccordian from '../components/FAQAccordian.vue'
     <Navbar />
   </header>
   <div class="container">
+    <!-- FAQ Buttons -->
     <div class="row">
       <h1 class="row justify-content-center">FAQ & Support</h1>
       <h6 class="row justify-content-center">Find answers or connect with a human.</h6>
-      <h6>FAQ</h6>
     </div>
-    <FAQAccordian/>
-    <div class="row justify-content-center">
-      <h6 class="row justify-content-center">Reach a car-buying expert</h6>
+    <div class="row align-items-center">
+      <h6>Browse by topic</h6>
+      <div v-for="topic in topics" :key="topic" class="col-auto">
+        <button type="button" class="btn btn-outline-primary" @click="handleTopicClick(topic)">
+          {{ topic }}
+        </button>
+      </div>
+    </div>
+
+    <!-- FAQ Cards -->
+    <div class="row justify-content-center mt-4">
+      <h6 class="row">Reach a car-buying expert</h6>
       <div class="col-lg-2 card mb-3" style="width: 30rem;">
         <div class="card-body">
           <h3 class="row justify-content-center card-title">Have questions? Just ask</h3>
@@ -55,7 +84,7 @@ Hours are Mon—Fri: 8am—10pm and Sat 9am—6pm ET</h6>
   </footer>
 </template>
 
-<style>
+<style scoped>
 @media (min-width: 1024px) {
   .about {
     min-height: 100vh;
@@ -63,10 +92,7 @@ Hours are Mon—Fri: 8am—10pm and Sat 9am—6pm ET</h6>
     align-items: center;
   }
 }
-  * {
-    margin: 0;
-    padding: 0;
-  }
+  
 .matters {
   background-color: whitesmoke;
 }
