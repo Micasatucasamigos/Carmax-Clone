@@ -3,7 +3,7 @@
   <nav class="bg-body-tertiary border-bottom">
     <div class="container d-flex flex-wrap">
       <ul class="nav me-auto">
-        <li class="nav-item"><RouterLink to="/" class="nav-link link-body-emphasis px-2 active" aria-current="page">BestCars</RouterLink></li>
+        <li class="nav-item"><RouterLink to="/" class="nav-link link-body-emphasis px-2 active" aria-current="page"><img src="../assets/bestcars-high-resolution-logo-transparent.png" height="20px"></RouterLink></li>
         <li class="nav-item"><RouterLink to="/shop" class="nav-link link-body-emphasis px-2">Shop</RouterLink></li>
         <li class="nav-item"><RouterLink to="/selltrade" class="nav-link link-body-emphasis px-2">Sell/Trade</RouterLink></li>
         <li class="nav-item"><RouterLink to="/finance" class="nav-link link-body-emphasis px-2">Finance</RouterLink></li>

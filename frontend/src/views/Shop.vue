@@ -175,13 +175,14 @@ document.addEventListener('click', closeDropdown)
         </div>
       </nav>
       
-      <!-- Car Cards -->
+      <!-- Vehicle Cards -->
       <div class="col-lg-9 col-md-8 col-sm-12">
         <div class="row">
           <div v-for="(car, index) in allCars.slice(0, itemsToShow)" :key="index" class="col-lg-4 col-md-6 col-sm-12 mb-4">
             <div class="card">
-              <a href="#" class="btn"><img :src="resolveImagePath(car.imgSrc)" class="card-img-top" alt="..."></a>
-              <div class="card-body">
+              <router-link :to="{ name: 'ProductPage', params: { id: index } }" class="btn">
+                <img :src="resolveImagePath(car.imgSrc)" class="card-img-top" alt="...">
+              </router-link>              <div class="card-body">
                 <h6>{{ car.title }}</h6>
                 <h4 class="card-title">{{ car.price }} | {{ car.mileage }}</h4>
               </div>

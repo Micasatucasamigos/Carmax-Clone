@@ -10,6 +10,9 @@ import SellTrade from '../views/SellTrade.vue'
 import Finance from '../views/Finance.vue'
 import Support from '../views/Support.vue'
 import TopicPage from '../components/TopicPage.vue'
+import ProductPage from '../components/ProductPage.vue'
+
+
 
 
 
@@ -81,6 +84,12 @@ const router = createRouter({
       name: 'TopicPage',
       component: TopicPage,
       props: true
+    },
+    {
+      path: '/product/:id',
+      name: 'ProductPage',
+      component: ProductPage,
+      props: true,
     },
   ],
   scrollBehavior(to, from, savedPosition) {

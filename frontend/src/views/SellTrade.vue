@@ -4,15 +4,7 @@ import Navbar from '../components/Navbar.vue'
 import Footer from '../components/Footer.vue'
 import StateDropdown from "../components/StateDropdown.vue"
 import SellingAccordian from "../components/SellingAccordian.vue"
-import Breadcrumb from '../components/Breadcrumb.vue'
 
-// Define the breadcrumbs
-const crumbs = ref(['Home', 'Category', 'Sub'])
-
-// Define the selected method
-function selected(crumb) {
-  console.log(crumb)
-}
 </script>
 
 <template>
@@ -20,9 +12,6 @@ function selected(crumb) {
   <header>
     <Navbar/>
   </header>
-  <div class="container">
-    <Breadcrumb :crumbs="crumbs" @selected="selected" />
-  </div>
   <div class="container mt-5">
     <div class="row justify-content-center">
       <h1 class="row mb-4 justify-content-center">Sell Your Car on Your Terms</h1>
